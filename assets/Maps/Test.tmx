@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="10" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="Pipes" tilewidth="32" tileheight="32" tilecount="6" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="Type" value="Tee"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Pipe_Tee.png"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Type" value="Block"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Pipe_Block.png"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Type" value="Cross"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Pipe_Cross.png"/>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="Type" value="L"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Pipe_L.png"/>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="Type" value="Straight"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Pipe_Straight.png"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="Type" value="Source"/>
+   </properties>
+   <image width="32" height="32" source="../../Raw Resources/Source.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="10" height="20">
+  <data encoding="csv">
+6,0,0,0,0,0,0,0,0,0,
+1610612737,1,1,1,1,1,1,1,1,3221225476,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,6,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+1610612737,3,3,3,3,3,3,3,3,2684354561,
+4,3221225473,3221225473,3221225473,3221225473,3221225473,3221225473,3221225473,3221225473,2684354561
+</data>
+ </layer>
+</map>

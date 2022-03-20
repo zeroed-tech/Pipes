@@ -1,0 +1,17 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+apply plugin: "artemis"
+
+weave {
+	enableArtemisPlugin = true
+	enablePooledWeaving = true
+	optimizeEntitySystems = true
+	classesDir = sourceSets.main.java.outputDir
+}
+
+dependencies {
+	api "com.badlogicgames.gdx:gdx:$gdxVersion"
+	api "net.onedaybeard.artemis:artemis-odb:$artemisOdbVersion"
+}
+
+classes.finalizedBy weave
