@@ -26,7 +26,7 @@ public class EntityCreationSystem extends BaseSystem {
     public void createEntity(String type, float x, float y, int cellRotation){
 
         switch (type){
-            case"Tee":
+            case "Tee":
             case "Cross":
             case "Straight":
             case "Block":
@@ -48,6 +48,7 @@ public class EntityCreationSystem extends BaseSystem {
         entity.add(new SpriteComponent().setSprite(atlas.findRegion("Pipe_"+ type)));
         entity.add(new Direction().setDir(cellRotation));
         entity.add(new FillProgress().setMaxCapacity(100));
+        entity.add(new PipeType().setType(type));
     }
 
     public void createSource(String type, float x, float y, int cellRotation){
@@ -58,6 +59,7 @@ public class EntityCreationSystem extends BaseSystem {
         entity.add(new Direction().setDir(cellRotation));
         entity.add(new FillProgress().setMaxCapacity(100.1f));
         entity.add(new Filling());
+        entity.add(new PipeType().setType(type));
     }
 
     @Override

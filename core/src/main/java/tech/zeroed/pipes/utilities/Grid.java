@@ -136,12 +136,18 @@ public class Grid<TGridObject> {
         return x >= 0 && y >= 0 && x < width && y < height;
     }
 
+    /*
+             N     0
+            WOE   3O1
+             S     2
+     */
+
     public TGridObject[] getNeighbours(int x, int y, Class clazz){
         TGridObject[] neighbours = (TGridObject[]) ArrayReflection.newInstance(clazz, 4);
-        neighbours[0] = isValid(x-1, y) ? getValue(x-1, y) : null;
+        neighbours[0] = isValid(x, y+1) ? getValue(x, y+1) : null;
         neighbours[1] = isValid(x+1, y) ? getValue(x+1, y) : null;
         neighbours[2] = isValid(x, y-1) ? getValue(x, y-1) : null;
-        neighbours[3] = isValid(x, y+1) ? getValue(x, y+1) : null;
+        neighbours[3] = isValid(x-1, y) ? getValue(x-1, y) : null;
         return neighbours;
     }
 

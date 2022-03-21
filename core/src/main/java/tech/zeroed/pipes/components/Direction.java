@@ -4,10 +4,19 @@ import com.artemis.Component;
 
 public class Direction extends Component {
     public enum Dir {
-        NORTH,
-        EAST,
-        SOUTH,
-        WEST
+        NORTH(0),
+        EAST(1),
+        SOUTH(2),
+        WEST(3);
+
+        private final int value;
+        private Dir(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
     }
 
     public Dir dir = Dir.NORTH;
