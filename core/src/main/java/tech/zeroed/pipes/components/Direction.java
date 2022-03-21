@@ -17,6 +17,20 @@ public class Direction extends Component {
         public int getValue() {
             return value;
         }
+
+        public int getJoiningDirection(){
+            switch (value){
+                case 0:
+                    return SOUTH.getValue();
+                case 1:
+                    return WEST.getValue();
+                case 2:
+                    return NORTH.getValue();
+                case 3:
+                    return EAST.getValue();
+            }
+            return -1;
+        }
     }
 
     public Dir dir = Dir.NORTH;
@@ -26,17 +40,20 @@ public class Direction extends Component {
         return this;
     }
 
-    public Direction setDir(int dirCode){
+    /**
+     * Tiled rotates NWSE for some reason so need to compensate for this here
+     */
+    public Direction setDirFromTilemap(int dirCode){
         Dir d = Dir.NORTH;
         switch (dirCode){
             case 1:
-                d = Dir.EAST;
+                d = Dir.WEST;
                 break;
             case 2:
                 d = Dir.SOUTH;
                 break;
             case 3:
-                d = Dir.WEST;
+                d = Dir.EAST;
                 break;
         }
 
@@ -48,11 +65,11 @@ public class Direction extends Component {
             case NORTH:
                 return 0;
             case EAST:
-                return 90;
+                return 270;
             case SOUTH:
                 return 180;
             case WEST:
-                return 270;
+                return 90;
         }
         return 0;
     }

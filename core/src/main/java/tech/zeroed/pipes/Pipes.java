@@ -40,6 +40,7 @@ public class Pipes extends ApplicationAdapter {
 						new PathFindingSystem(),
 						new PathFollowSystem(),
 						new PathRendererSystem(),
+						new SourceSystem(),
 						new FloodSystem(),
 						new FloodGridRenderer()
 				)
